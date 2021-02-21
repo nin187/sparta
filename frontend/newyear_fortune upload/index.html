@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="2021年干支占い" />
+    <meta property="og:description" content="あなたの今年の運勢は？" />
+    <meta property="og:image" content="ogimage.png" />
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet" />
+    <title>2021年干支占い</title>
+    <style>
+        * {
+            font-family: "Yusei Magic", sans-serif;
+        }
+
+        body {
+            background-color: ivory;
+            background-image: url('pattern.png');
+            background-position: 760px 400px;
+            background-repeat: no-repeat;
+        }
+
+        .title {
+            color: darkred;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 50px;
+        }
+
+        .title>h1 {
+            font-size: 56px;
+            margin-bottom: 0;
+        }
+
+        .buttons {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1200px;
+        }
+
+        .buttons>a {
+            display: block;
+            width: 150px;
+            height: 120px;
+            border: solid 3px darkred;
+            border-radius: 150px;
+            box-shadow: 0 0 10px 0 darkred;
+            margin: 10px;
+            background-color: white;
+            background-size: 85%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .buttons>a:hover {
+            background-color: darkred;
+        }
+
+        .button1 {
+            background-image: url("yearS1.png");
+        }
+
+        .button2 {
+            background-image: url("yearS2.png");
+        }
+
+        .button3 {
+            background-image: url("yearS3.png");
+        }
+
+        .button4 {
+            background-image: url("yearS4.png");
+        }
+
+        .button5 {
+            background-image: url("yearS5.png");
+        }
+
+        .button6 {
+            background-image: url("yearS6.png");
+        }
+
+        .button7 {
+            background-image: url("yearS7.png");
+        }
+
+        .button8 {
+            background-image: url("yearS8.png");
+        }
+
+        .button9 {
+            background-image: url("yearS9.png");
+        }
+
+        .button10 {
+            background-image: url("yearS10.png");
+        }
+
+        .button11 {
+            background-image: url("yearS11.png");
+        }
+
+        .button12 {
+            background-image: url("yearS12.png");
+        }
+
+        @media screen and (max-width: 812px) {
+            body {
+                background-position: 150px -100px;
+                background-size: 500px;
+            }
+
+            .title {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .title>h1 {
+                font-size: 40px;
+            }
+
+            .buttons {
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .buttons>a {
+                color: darkred;
+                margin: 5px 5px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="pages.js"></script>
+</head>
+
+<body>
+    <div class="title">
+        <h1>2021年干支占い</h1>
+        <h2>あなたの今年の運勢は？</h2>
+    </div>
+    <div class="buttons">
+        <a class="button1" href="result.html?year=1">ねずみ</a>
+        <a class="button2" href="result.html?year=2">うし</a>
+        <a class="button3" href="result.html?year=3">とら</a>
+        <a class="button4" href="result.html?year=4">うさぎ</a>
+        <a class="button5" href="result.html?year=5">たつ</a>
+        <a class="button6" href="result.html?year=6">へび</a>
+        <a class="button7" href="result.html?year=7">うま</a>
+        <a class="button8" href="result.html?year=8">ひつじ</a>
+        <a class="button9" href="result.html?year=9">さる</a>
+        <a class="button10" href="result.html?year=10">とり</a>
+        <a class="button11" href="result.html?year=11">いぬ</a>
+        <a class="button12" href="result.html?year=12">いのしし</a>
+    </div>
+</body>
+
+</html>

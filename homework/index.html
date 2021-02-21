@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <style>
+        * {
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        .main {
+            width: 450px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .image {
+            width: 400px;
+            margin: auto;
+        }
+
+        .info {
+            width: 410px;
+            padding: 10px;
+        }
+
+        .price {
+            margin: 20px;
+            font-size: 18px;
+        }
+
+        .fx {
+            color: blue;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .order_form {
+            width: 410px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        .btn.btn-outline-dark {
+            width: 100px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+    <script>
+        // 여기에 코드를 입력하세요
+        // $(document).ready(fx(), {});
+        $(function () {
+            fx();
+        });
+
+        function fx() {
+            $.ajax({
+                type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                    let rate = response[1]['rate'];
+                    let temp_html = `달러-원 환율: ${rate}`
+                    $('#fx').text(temp_html);
+                }
+            })
+        }
+    </script>
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="image">
+            <img src="https://i.pinimg.com/originals/23/ab/6c/23ab6cbf3269da30dac57f1921d8bfda.jpg" width="400"
+                height="400">
+        </div>
+        <div class="info">
+            <h3>상품제목<span class="price">가격: 999,999,998원 / 개</span>
+            </h3>
+            커스텀메이드 빅토리녹스입니다.<br>91mm 2 layer로 심플한 구성이며, 티탄 스케일에 엠블렘은 Copper 재질로 포인트를 주었습니다.
+        </div>
+        <div class="fx" id="fx"></div>
+        <div class="order_form">
+            <h3>주문하기</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">주문자 이름</span>
+                </div>
+                <input type="text" class="form-control" aria-label="name" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text"
+                        for="inputGroupSelect01">수&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;량</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>- 수량을 선택하세요 -</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"
+                        id="basic-addon1">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</span>
+                </div>
+                <input type="text" class="form-control" aria-label="address" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">전&nbsp;화&nbsp;&nbsp;번&nbsp;호</span>
+                </div>
+                <input type="text" class="form-control" aria-label="phone" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-dark">주문하기</button>
+    </div>
+</body>
+
+</html>
