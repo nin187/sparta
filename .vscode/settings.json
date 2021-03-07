@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "../../_venv_sparta/bin/python3",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"
+    }
+}
