@@ -3,6 +3,5 @@
     "python.terminal.activateEnvInCurrentTerminal": true,
     "code-runner.executorMap": {
         "python": "$pythonPath -u $fullFileName"
-    },
-    "python.formatting.provider": "black"
+    }
 }
